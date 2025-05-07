@@ -23,7 +23,7 @@ ApplicationWindow {
         Component.onCompleted: {
             NativeApi.onRtpStream.connect((sdpFile)=>{
                 playingFile = sdpFile;
-                play(sdpFile)
+                // play(sdpFile)  // 已注释掉
             });
             onPlayStopped.connect(()=>{
                 stop();
