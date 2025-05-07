@@ -1,4 +1,4 @@
-import QtQuick 2.15
+ import QtQuick 2.15
 import QtQuick.Controls 2.15
 import realTimePlayer 1.0
 import Qt.labs.platform 1.1
@@ -23,7 +23,7 @@ ApplicationWindow {
         Component.onCompleted: {
             NativeApi.onRtpStream.connect((sdpFile)=>{
                 playingFile = sdpFile;
-                // play(sdpFile)  // 已注释掉
+                // play(sdpFile)  // 不播放
             });
             onPlayStopped.connect(()=>{
                 stop();
